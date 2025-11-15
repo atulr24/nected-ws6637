@@ -2,7 +2,7 @@
  "entityType": "variable",
  "data": {
   "createdAt": "2025-11-15T12:30:07.737Z",
-  "updatedAt": "2025-11-15T12:30:07.737Z",
+  "updatedAt": "2025-11-15T12:34:15.635145Z",
   "isDeleted": false,
   "commitId": "",
   "status": "",
@@ -17,7 +17,8 @@
   "scope": "workspace",
   "dataType": "string",
   "value": {
-   "data": "sssas"
+   "data": "sssas",
+   "canReset": true
   }
  }
 }
