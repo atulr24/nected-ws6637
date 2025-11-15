@@ -4,20 +4,20 @@
  "live": true,
  "data": {
   "createdAt": "2025-11-15T12:25:06.239Z",
-  "updatedAt": "2025-11-15T12:26:22.125Z",
+  "updatedAt": "2025-11-15T12:34:57.297Z",
   "isDeleted": false,
-  "testedAt": "2025-11-15T12:26:17.75Z",
-  "publishedAt": "2025-11-15T12:26:22.118Z",
+  "testedAt": "2025-11-15T12:34:52.048Z",
+  "publishedAt": "2025-11-15T12:34:57.292Z",
   "entityId": "503c638d-d240-44dc-89c8-c9e9720dde8a",
   "name": "Test123",
-  "commitId": "commit-effec63e-1d7d-43f3-8ebc-312ef39c78b5",
+  "commitId": "commit-3d379780-0b45-4607-8f6b-d551607390b4",
   "status": "published",
   "lastVersion": "draft",
-  "isLive": false,
+  "isLive": true,
   "commitInfo": {
-   "title": "Created at 2025-11-15 12:25:06",
-   "description": "v1",
-   "timeStamp": "2025-11-15T12:26:22.117Z"
+   "title": "Forked from 0.20",
+   "description": "v3",
+   "timeStamp": "2025-11-15T12:34:57.29Z"
   },
   "customInput": {
    "name": {
@@ -33,7 +33,17 @@
     }
    },
    "properties": {
+    "param_fRp1qx": {
+     "nextId": "param_UEBeGV",
+     "prevId": "rule_03",
+     "type": "simpleCondition"
+    },
     "rule_03": {
+     "nextId": "param_fRp1qx",
+     "type": "simpleCondition"
+    },
+    "param_UEBeGV": {
+     "prevId": "param_fRp1qx",
      "type": "simpleCondition"
     }
    },
@@ -50,11 +60,20 @@
   },
   "conditions": {
    "nodes": {
+    "param_fRp1qx": {
+     "sourceType": "custom",
+     "dataType": "jsCondition",
+     "nodeType": "params",
+     "attribute": "sql",
+     "siblingIndex": 1
+    },
     "rule_01": {
      "operator": "and",
      "nodeType": "group",
      "children": [
-      "rule_02"
+      "rule_02",
+      "c_oMQ82n",
+      "c_gxrX4h"
      ],
      "siblingIndex": 1
     },
@@ -74,6 +93,37 @@
      "dataType": "string",
      "nodeType": "params",
      "attribute": "name",
+     "siblingIndex": 1
+    },
+    "c_gxrX4h": {
+     "value": "",
+     "name": "Any",
+     "dataType": "excelCondition",
+     "nodeType": "excelCondition",
+     "query": "1===1",
+     "parent": "rule_01",
+     "leftNode": [
+      "param_UEBeGV"
+     ],
+     "siblingIndex": 1
+    },
+    "c_oMQ82n": {
+     "value": "",
+     "name": "Any",
+     "dataType": "jsCondition",
+     "nodeType": "jsCondition",
+     "query": "1===1",
+     "parent": "rule_01",
+     "leftNode": [
+      "param_fRp1qx"
+     ],
+     "siblingIndex": 1
+    },
+    "param_UEBeGV": {
+     "sourceType": "custom",
+     "dataType": "excelCondition",
+     "nodeType": "params",
+     "attribute": "excel",
      "siblingIndex": 1
     }
    }
@@ -96,7 +146,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },

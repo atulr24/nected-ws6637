@@ -3,20 +3,20 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-11-15T12:25:06.239Z",
-  "updatedAt": "2025-11-15T12:26:51.401125Z",
+  "updatedAt": "2025-11-15T12:34:57.301304Z",
   "isDeleted": false,
-  "testedAt": "2025-11-15T12:26:41.21Z",
-  "publishedAt": "2025-11-15T12:26:51.388Z",
+  "testedAt": "2025-11-15T12:34:52.048Z",
+  "publishedAt": "2025-11-15T12:34:57.292Z",
   "entityId": "503c638d-d240-44dc-89c8-c9e9720dde8a",
   "name": "Test123",
-  "commitId": "commit-ce134c42-3e26-4881-ad16-ab2fdee61c95",
+  "commitId": "commit-a74b75ee-ae37-4895-9d91-4a4e2dbf8319",
   "status": "published",
   "lastVersion": "draft",
   "isLive": true,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "description": "v2",
-   "timeStamp": "2025-11-15T12:26:51.386Z"
+   "title": "Forked from 0.20",
+   "description": "v3",
+   "timeStamp": "2025-11-15T12:34:57.29Z"
   },
   "customInput": {
    "name": {
@@ -36,7 +36,12 @@
      "nextId": "param_fRp1qx",
      "type": "simpleCondition"
     },
+    "param_UEBeGV": {
+     "prevId": "param_fRp1qx",
+     "type": "simpleCondition"
+    },
     "param_fRp1qx": {
+     "nextId": "param_UEBeGV",
      "prevId": "rule_03",
      "type": "simpleCondition"
     }
@@ -54,12 +59,27 @@
   },
   "conditions": {
    "nodes": {
+    "param_UEBeGV": {
+     "sourceType": "custom",
+     "dataType": "excelCondition",
+     "nodeType": "params",
+     "attribute": "excel",
+     "siblingIndex": 1
+    },
+    "param_fRp1qx": {
+     "sourceType": "custom",
+     "dataType": "jsCondition",
+     "nodeType": "params",
+     "attribute": "sql",
+     "siblingIndex": 1
+    },
     "rule_01": {
      "operator": "and",
      "nodeType": "group",
      "children": [
       "rule_02",
-      "c_oMQ82n"
+      "c_oMQ82n",
+      "c_gxrX4h"
      ],
      "siblingIndex": 1
     },
@@ -81,6 +101,18 @@
      "attribute": "name",
      "siblingIndex": 1
     },
+    "c_gxrX4h": {
+     "value": "",
+     "name": "Any",
+     "dataType": "excelCondition",
+     "nodeType": "excelCondition",
+     "query": "1===1",
+     "parent": "rule_01",
+     "leftNode": [
+      "param_UEBeGV"
+     ],
+     "siblingIndex": 1
+    },
     "c_oMQ82n": {
      "value": "",
      "name": "Any",
@@ -92,20 +124,13 @@
       "param_fRp1qx"
      ],
      "siblingIndex": 1
-    },
-    "param_fRp1qx": {
-     "sourceType": "custom",
-     "dataType": "jsCondition",
-     "nodeType": "params",
-     "attribute": "sql",
-     "siblingIndex": 1
     }
    }
   },
   "firstCustomInput": "name",
   "description": "",
   "policy": "first",
-  "version": "0.20",
+  "version": "0.10",
   "type": "decisionTable",
   "dataSetId": "",
   "settings": {
